@@ -193,10 +193,10 @@ function addColumns(data) {
     data.responsibilities
   );
 
+  addSection("Projects", 2, projectsGen, data.projects);
   addSection("Experiences", 2, experiencesGen, data.experiences);
   addSection("Education", 2, educationGen, data.education);
-  addSection("Projects", 2, projectsGen, data.projects);
-  addSection("Achievements", 2, achievementsGen, data.achievements);
+  // addSection("Achievements", 2, achievementsGen, data.achievements);
 }
 
 function addDownloadWIPModal() {
@@ -233,7 +233,7 @@ function setupMenu() {
 
 function prepareData() {
   $.getJSON(
-    "https://gist.githubusercontent.com/mohitkhedkar/11b418496feb32007579441940c2f03a/raw/5ae113a19326c63a25737e34428674ef8827254d/resumedata.json"
+    "https://gist.githubusercontent.com/mohitkhedkar/11b418496feb32007579441940c2f03a/raw/795afa7dd351af0c6341d42edf0fede264452590/resumedata.json"
   )
     .done(function (json) {
       preparePage(json);
